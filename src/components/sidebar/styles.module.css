@@ -7,6 +7,11 @@
   height: 100%;
   background: var(--light);
   z-index: 100;
+  transition: 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 60px;
 }
 
 .brand {
@@ -79,6 +84,7 @@
   font-size: 1rem;
 }
 
+.menu a,
 .items li a {
   color: var(--dark);
 }
