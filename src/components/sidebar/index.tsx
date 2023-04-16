@@ -1,8 +1,9 @@
-import { memo, useState } from "react";
+import { memo, useContext, useState } from "react";
 import styles from "./styles.module.css";
 import { FaReact, FaShoppingBag, FaCog } from "react-icons/fa";
 import { MdDashboard, MdDonutLarge } from "react-icons/Md";
 import { RiMessage2Fill, RiGroupFill, RiLogoutBoxFill } from "react-icons/Ri";
+import { SidebarContext } from "@/contexts/sidebarContext";
 
 const sidebarItems = [
   { name: "Dashboard", icon: <MdDashboard /> },
@@ -13,9 +14,10 @@ const sidebarItems = [
 ];
 
 function Sidebar() {
+  const { collapsed } = useContext(SidebarContext);
   const [active, setActive] = useState<number>(0);
   return (
-    <aside className={styles.sidebar}>
+    <aside className={`${styles.sidebar} ${collapsed ? styles.collapsed : undefined}`}>
       <a href="#" className={styles.brand}>
         <FaReact />
         <span>AdminHub</span>

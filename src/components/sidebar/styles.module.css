@@ -8,10 +8,11 @@
   background: var(--light);
   z-index: 100;
   transition: 0.3s ease;
+  overflow-x: hidden;
 }
 
 .sidebar.collapsed {
-  width: 60px;
+  width: 3.75rem;
 }
 
 .brand {
@@ -49,6 +50,10 @@
 .items li.active a {
   color: var(--blue);
 }
+.sidebar.collapsed li a {
+  width: calc(3rem - (0.25rem * 2));
+  transition: width 0.3s ease;
+}
 
 .items li.active::before {
   content: "";
@@ -82,11 +87,13 @@
   align-items: center;
   border-radius: 3rem;
   font-size: 1rem;
+  overflow-x: hidden;
 }
 
 .menu a,
 .items li a {
   color: var(--dark);
+  white-space: nowrap;
 }
 
 .items li a:hover {
@@ -102,4 +109,14 @@
 
 .logoff a {
   color: var(--red);
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 3.75rem;
+  }
+
+  .sidebar li a {
+    width: calc(3rem - (0.25rem * 2));
+  }
 }

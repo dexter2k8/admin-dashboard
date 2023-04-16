@@ -2,6 +2,12 @@
   position: relative;
   width: calc(100% - 17.5rem);
   left: 17.5rem;
+  transition: 0.3s ease;
+}
+
+.content.collapsed {
+  width: calc(100% - 3.75rem);
+  left: 3.75rem;
 }
 
 .content nav {
@@ -36,6 +42,7 @@
 
 .content nav svg {
   cursor: pointer;
+  min-width: 1rem;
 }
 
 .content nav a.menu {
@@ -62,6 +69,7 @@
   flex-grow: 1;
   padding: 0 1rem;
   height: 100%;
+  width: 100%;
   border: none;
   background: var(--grey);
   border-radius: 2.25rem 0 0 2.25rem;
@@ -110,9 +118,29 @@
 }
 .content nav a.avatar {
   background-color: bisque;
-  width: 2.25rem;
+  min-width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
   text-align: center;
   overflow: hidden;
+}
+
+@media (max-width: 576px) {
+  .content {
+    width: calc(100% - 3.75rem);
+    left: 3.75rem;
+  }
+
+  .content nav {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .content nav > svg {
+    display: none;
+  }
+
+  .content nav a.menu {
+    display: none;
+  }
 }

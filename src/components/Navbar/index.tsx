@@ -1,14 +1,16 @@
+import { SidebarContext } from "@/contexts/sidebarContext";
 import styles from "./styles.module.css";
 import Image from "next/image";
-import { memo } from "react";
+import { memo, useContext } from "react";
 import { MdMenu, MdSearch } from "react-icons/Md";
 import { FaBell } from "react-icons/fa";
 
 function Navbar() {
+  const { collapsed, setCollapsed } = useContext(SidebarContext);
   return (
-    <div className={styles.content}>
+    <div className={`${styles.content} ${collapsed ? styles.collapsed : undefined}`}>
       <nav>
-        <MdMenu />
+        <MdMenu onClick={() => setCollapsed(!collapsed)} />
         <a href="#" className={styles.menu}>
           Categories
         </a>
