@@ -7,8 +7,8 @@
 <p align="justify">
 ## Description
 
-Admin e-commerce dashboard made with nextjs
+Admin e-commerce dashboard layout, made in nextjs
 
-![Page layout](https://github.com/dexter2k8/sidebar-dropdown-nextjs/blob/main/public/page.gif)
+![Page layout](https://github.com/dexter2k8/admin-dashboard/blob/main/public/page.gif)
 
 </p>
