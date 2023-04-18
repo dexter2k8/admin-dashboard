@@ -18,10 +18,12 @@ function Sidebar() {
   const [active, setActive] = useState<number>(0);
   return (
     <aside className={`${styles.sidebar} ${collapsed ? styles.collapsed : undefined}`}>
-      <a href="#" className={styles.brand}>
-        <FaReact />
-        <span>AdminHub</span>
-      </a>
+      <div className={styles.head}>
+        <a href="#">
+          <FaReact />
+          <span>AdminHub</span>
+        </a>
+      </div>
       <ul className={styles.items}>
         {sidebarItems.map((item, i) => (
           <li key={i} className={i === active ? styles.active : undefined} onClick={() => setActive(i)}>

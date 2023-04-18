@@ -1,0 +1,25 @@
+.content {
+  position: relative;
+  width: calc(100% - 17.5rem);
+  left: 17.5rem;
+  transition: 0.3s ease;
+}
+
+.content.collapsed {
+  width: calc(100% - 3.75rem);
+  left: 3.75rem;
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: calc(100% - 11rem);
+    left: 11rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    width: calc(100% - 3.75rem);
+    left: 3.75rem;
+  }
+}

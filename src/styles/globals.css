@@ -29,10 +29,6 @@ li {
   --light-orange: #ffe0d3;
 }
 
-html {
-  /* overflow-x: hidden; */
-}
-
 body.dark {
   --light: #0c0c1e;
   --grey: #060714;

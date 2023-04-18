@@ -1,16 +1,4 @@
-.content {
-  position: relative;
-  width: calc(100% - 17.5rem);
-  left: 17.5rem;
-  transition: 0.3s ease;
-}
-
-.content.collapsed {
-  width: calc(100% - 3.75rem);
-  left: 3.75rem;
-}
-
-.content nav {
+.navigator {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   height: 3.5rem;
@@ -19,13 +7,13 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  /* position: sticky; */
-  /* top: 0; */
-  /* left: 0; */
-  /* z-index: 100; */
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
-.content nav::before {
+.navigator::before {
   content: "";
   position: absolute;
   width: 2.5rem;
@@ -36,36 +24,36 @@
   box-shadow: -1.25rem -1.25rem 0 var(--light);
 }
 
-.content nav a {
+.navigator a {
   color: var(--dark);
 }
 
-.content nav svg {
+.navigator svg {
   cursor: pointer;
   min-width: 1rem;
 }
 
-.content nav a.menu {
+.navigator a.menu {
   transition: 0.3s ease;
 }
 
-.content nav a.menu:hover {
+.navigator a.menu:hover {
   color: var(--blue);
 }
 
-.content nav form {
+.navigator form {
   max-width: 25rem;
   width: 100%;
   margin-right: auto;
 }
 
-.content nav form div {
+.navigator form div {
   display: flex;
   align-items: center;
   height: 2.25rem;
 }
 
-.content nav form div input {
+.navigator form div input {
   flex-grow: 1;
   padding: 0 1rem;
   height: 100%;
@@ -76,7 +64,7 @@
   outline: none;
 }
 
-.content nav form div button {
+.navigator form div button {
   width: 2.25rem;
   height: 100%;
   display: flex;
@@ -91,12 +79,12 @@
   cursor: pointer;
 }
 
-.content nav a.bell {
+.navigator a.bell {
   font-size: 1.25rem;
   position: relative;
 }
 
-.content nav a.bell span {
+.navigator a.bell span {
   position: absolute;
   top: -0.375rem;
   right: -0.375rem;
@@ -113,10 +101,10 @@
   align-items: center;
 }
 
-.content nav a.avatar img {
+.navigator a.avatar img {
   object-fit: cover;
 }
-.content nav a.avatar {
+.navigator a.avatar {
   background-color: bisque;
   min-width: 2.25rem;
   height: 2.25rem;
@@ -126,21 +114,16 @@
 }
 
 @media (max-width: 576px) {
-  .content {
-    width: calc(100% - 3.75rem);
-    left: 3.75rem;
-  }
-
-  .content nav {
+  .navigator {
     gap: 0.5rem;
     padding: 0.5rem;
   }
 
-  .content nav > svg {
+  .navigator > svg {
     display: none;
   }
 
-  .content nav a.menu {
+  .navigator a.menu {
     display: none;
   }
 }

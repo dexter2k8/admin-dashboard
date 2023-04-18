@@ -1,0 +1,245 @@
+.dashboard {
+  width: 100%;
+  padding: 2.25rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cards div h1 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+  color: var(--dark);
+  cursor: default;
+}
+
+.headline {
+  display: flex;
+  line-height: 1rem;
+  gap: 1rem;
+}
+
+.headline li {
+  color: var(--dark);
+}
+
+.headline li a {
+  color: var(--dark-grey);
+  pointer-events: none;
+}
+
+.headline li a.active {
+  color: var(--blue);
+  pointer-events: unset;
+}
+
+.btnDownload {
+  height: 2.25rem;
+  padding: 0 1rem;
+  border-radius: 2.25rem;
+  background: var(--blue);
+  color: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  font-weight: 500;
+}
+
+.boxInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 1.5rem;
+  margin-top: 2.25rem;
+}
+
+.boxInfo li {
+  padding: 1.5rem;
+  background: var(--light);
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: default;
+}
+
+.boxInfo li i {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.625rem;
+}
+
+.boxInfo li i svg {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.boxInfo li span h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.boxInfo li:nth-child(1) i {
+  background-color: var(--light-blue);
+  color: var(--blue);
+}
+
+.boxInfo li:nth-child(2) i {
+  background-color: var(--light-yellow);
+  color: var(--yellow);
+}
+
+.boxInfo li:nth-child(3) i {
+  background-color: var(--light-orange);
+  color: var(--orange);
+}
+
+.tableData {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  color: var(--dark);
+}
+
+.tableData > div {
+  border-radius: 1.25rem;
+  background: var(--light);
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.order {
+  flex-grow: 1;
+  flex-basis: 32.5rem;
+}
+
+.todo {
+  flex-grow: 1;
+  flex-basis: 18.75rem;
+}
+
+.tableData .head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  min-width: 26rem;
+}
+
+.tableData .head h3 {
+  margin-right: auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.tableData .head svg {
+  cursor: pointer;
+}
+
+.tableData table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 26rem;
+}
+
+.tableData table th {
+  padding-bottom: 0.75rem;
+  font-size: 0.82rem;
+  text-align: left;
+  border-bottom: 1px solid var(--grey);
+}
+
+.tableData table td {
+  padding: 1rem 0;
+}
+
+.tableData table tr td:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-left: 0.375rem;
+}
+
+.tableData table td figure {
+  background-color: bisque;
+  min-width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tableData table td figure svg {
+  object-fit: cover;
+}
+
+.tableData table td .status {
+  font-size: 0.625rem;
+  padding: 0.375rem 1rem;
+  color: var(--light);
+  border-radius: 1.25rem;
+  font-weight: 600;
+}
+
+.tableData table td .status.completed {
+  background: var(--blue);
+}
+
+.tableData table td .status.process {
+  background: var(--yellow);
+}
+
+.tableData table td .status.pending {
+  background: var(--orange);
+}
+
+.tableData table tbody tr:hover {
+  background: var(--grey);
+  cursor: default;
+}
+
+.tableData .todo ul {
+  width: 100%;
+  min-width: 26rem;
+}
+
+.tableData .todo ul li {
+  width: 100%;
+  margin-bottom: 1rem;
+  background: var(--grey);
+  border-radius: 0.625rem;
+  padding: 0.875rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 0.625rem solid;
+  cursor: default;
+}
+
+.tableData .todo ul li:last-child {
+  margin-bottom: 0;
+}
+
+.tableData .todo ul li.completed {
+  border-left-color: var(--blue);
+}
+.tableData .todo ul li.notCompleted {
+  border-left-color: var(--orange);
+}
+
+.tableData .todo ul li svg {
+  cursor: pointer;
+}
