@@ -7,7 +7,7 @@
 <p align="justify">
 ## Description
 
-Admin e-commerce dashboard layout, made in nextjs
+Admin e-commerce responsive dashboard layout, made in nextjs
 
 ![Page layout](https://github.com/dexter2k8/admin-dashboard/blob/main/public/page.gif)
 
